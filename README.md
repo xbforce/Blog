@@ -1,9 +1,7 @@
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/xbforce.svg?style=social&label=Follow%20%40xbforce)](https://twitter.com/xbforce)
 
 
-# posts
-
-#### I share my writeups, articles, videos here.
+## I share my writeups, articles, videos here.
 
 <br>
 <br>
