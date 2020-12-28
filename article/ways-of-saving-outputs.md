@@ -6,7 +6,9 @@
 There are different ways to save stdout and stderr to a file on Unix like machines.
 
 In this post I mention stdout and stderr a lot, so first we need to know what they are:
+
 Stdout is short for standard output, which is the default data stream for output.
+
 Stderr or standard error is another output stream typically used by programs to output error messages.
 
 
