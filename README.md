@@ -13,11 +13,11 @@
 WriteUp
 ```
 
-[Sniper's Writeup](https://github.com/xbforce/posts/blob/main/writeup/sniper-htb.md) Sniper is a medium level windows box and its IP address is 10.10.10.151. To solve this box you need to use a windows machine or use wine tool in Kali linux. As always I scanned the target with Nmap: I usually scan all ports without any specific flag [Read more](https://github.com/xbforce/posts/blob/main/writeup/sniper-htb.md)
+[Sniper's Writeup](https://github.com/xbforce/blog/blob/main/writeup/sniper-htb.md) Sniper is a medium level windows box and its IP address is 10.10.10.151. To solve this box you need to use a windows machine or use wine tool in Kali linux. As always I scanned the target with Nmap: I usually scan all ports without any specific flag [Read more](https://github.com/xbforce/blog/blob/main/writeup/sniper-htb.md)
 
 <br>
 
-[Monteverde's Writeup](https://github.com/xbforce/posts/blob/main/writeup/monteverde-htb.md) Monteverde is a medium Windows box which let you to learn something new about Azure AD. Getting user flag wasn’t a big deal to me, but the root was a pain in the neck. I do nmap without any specific flag to scan all ports [Read more](https://github.com/xbforce/posts/blob/main/writeup/monteverde-htb.md)
+[Monteverde's Writeup](https://github.com/xbforce/blog/blob/main/writeup/monteverde-htb.md) Monteverde is a medium Windows box which let you to learn something new about Azure AD. Getting user flag wasn’t a big deal to me, but the root was a pain in the neck. I do nmap without any specific flag to scan all ports [Read more](https://github.com/xbforce/blog/blob/main/writeup/monteverde-htb.md)
 
 
 <br>
@@ -28,11 +28,11 @@ WriteUp
 Video
 ```
 
-[How To Install Evilgrade](https://github.com/xbforce/posts/blob/main/videos/evilgrade.md) Evilgrade is a tool which allows hackers to inject malicious updates of softwares to the victims’ machines. In this video I show you how to install Evilgrade on Kali Linux machines. [Read more](https://github.com/xbforce/posts/blob/main/videos/evilgrade.md)
+[How To Install Evilgrade](https://github.com/xbforce/blog/blob/main/videos/evilgrade.md) Evilgrade is a tool which allows hackers to inject malicious updates of softwares to the victims’ machines. In this video I show you how to install Evilgrade on Kali Linux machines. [Read more](https://github.com/xbforce/blog/blob/main/videos/evilgrade.md)
 
 <br>
 
-[How To Fix "Network Is Unreachable" Error?](https://github.com/xbforce/posts/blob/main/videos/net-is-unreachable.md) Sometimes when you start using a new interface you lose your network connection and face the error [Read more](https://github.com/xbforce/posts/blob/main/videos/net-is-unreachable.md)
+[How To Fix "Network Is Unreachable" Error?](https://github.com/xbforce/blog/blob/main/videos/net-is-unreachable.md) Sometimes when you start using a new interface you lose your network connection and face the error [Read more](https://github.com/xbforce/blog/blob/main/videos/net-is-unreachable.md)
 
 <br>
 <br>
@@ -42,7 +42,7 @@ Video
 Article
 ```
 
-[Ways Of Saving Outputs](https://github.com/xbforce/posts/blob/main/article/ways-of-saving-outputs.md) In this post I mention stdout and stderr a lot, so first we need to know what they are: Stdout is short for standard output, which is the default data stream for output. Stderr or standard error is another output stream typically used by programs to output error messages.[Read more](https://github.com/xbforce/posts/blob/main/article/ways-of-saving-outputs.md)
+[Ways Of Saving Outputs](https://github.com/xbforce/blog/blob/main/article/ways-of-saving-outputs.md) In this post I mention stdout and stderr a lot, so first we need to know what they are: Stdout is short for standard output, which is the default data stream for output. Stderr or standard error is another output stream typically used by programs to output error messages.[Read more](https://github.com/xbforce/blog/blob/main/article/ways-of-saving-outputs.md)
 
 <br>
 
