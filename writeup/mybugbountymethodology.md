@@ -101,7 +101,7 @@ X-Requested-With: hello.com
 
 :heavy_check_mark: **Cross Origin Resource Sharing (CORS)**
 1- If the endpoint contains sensitive information try CORS:
-- Put these Request headers to see if the reflects in the Response:
+- Put these Request headers to see if they reflect in the Response header:
 ```
 Origin: attacker.com
 Origin: attackertarget.com
