@@ -2,9 +2,7 @@
 # My Bug Bounty methodology
 
 
-Depends on the target and its scopes I may work 2 days to 10-15 days on the target.
-
-This is how I work on bug bounty programs. Please let me know if I should do anything else to make my methodology more effective.
+This is how I work on bug bounty programs. Please let me know via my twitter if I should do anything else to make my methodology more effective.
 
 <br/>
 
@@ -23,104 +21,188 @@ Use dmitry, whatweb, google dork and github to gather more information about the
 
 <br/>
 
-:heavy_check_mark: **Host Header Injection**
+:heavy_check_mark: **Google Dorking**
+1. Dork for open redirection
+2. Dork for different extensions like .py, .php, .asp, xml
 
-After gathering information I check the target for Host header injection.
-
-I play with Host header to see if I can get any response on my server.
-
-- e.g:
-```
-Host: target.com
-Host: evil.com
-```
-
-OR
-```
- Host: target.com
-Host: evil.com
-```
-
-OR
-
-```
-Host: target.com
-X-Host: evil.com
-```
-
-I use burp param miner and intruder to test different host headers and internal IPs or encoded localhost for SSRF.
 
 <br/>
 
-:heavy_check_mark: **Code review #webcache poisoning**
-
-I open different pages and intercept traffics via burpsuite, then look at the codes to know the target better.
-
-Check to see if there is any js page which I can use for web cache poisoning.
-
-I also Look for comments and the backend language.
+:heavy_check_mark: **Github Dorking**
+1. Dork for api keys: api-key, api_key, api.key, apikey, access_token
+2. Dork for password, secret, username
 
 <br/>
 
-:heavy_check_mark: **http request smuggling**
 
-I try different techniques on the target for Http request smuggling, like the following:
-
-```
-POST / HTTP/1.1
-Host: example.com
-Content-Type: application/x-www-form-urlencoded
-Content-length: 4
-Transfer-Encoding: chunked
-
-5e
-POST /404 HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length 15
-
-x=1
-0
-``` 
+:heavy_check_mark: **Broken Authentication**
+1. Request a password reset link as ATTACKER, then change the email address and password as
+! VICTIM, and after that try to reset the password with the link as ATTACKER.
+2. Check if you can use password reset link after 24 hours.
 
 <br/>
 
-:heavy_check_mark: **server-side template injection**
 
-I try to get error on different paramters to see if there is any server-side template injection vulnerability and to recognize the framework.
+:heavy_check_mark: **Cross Site Scripting (XSS)**
+1. Click on every function and intercept them with burp and copy URLs which contain parameters
+! then use kooxss tool to find XSS.
+2. Use waybackurl to gather URLs, then modify URLs and test them with kooxss.
+++
+$ cat target_domain.txt | waybackurl > wbu_target.com.txt
+$ kooxss wbu_target.com.txt ATTACKER.com
+++
 
+3. Filter burp proxy history for possible DOM XSS events or the followings:
 ```
-{{%= 3 * '5'}
+- [url]
+- value=""
+- value=''
+- window.location.host
+- window.location.href
+- location.search
 ```
 
 <br/>
 
-:heavy_check_mark: **Account takeover**
 
-I work on login pages to takeover accounts or bypass 2FAs.
+:heavy_check_mark: **Open Redirection (openR)**
+1. Use the URLs that you gathered from burpsuite and waybackurl to check them for openR.
 
-Create two accounts one as the attacker and one as the victim.
-
-I intercept all traffics and look at the URLs, Requests and Responses carefully to see if there is anything suspicious.
 
 <br/>
 
-:heavy_check_mark: **CSRF**
-
-Look at the headers and Requests to see if I can do CSRF attack.
-
-<br/>
-
-:heavy_check_mark: **SQL injection**
-
-I use sqlmap to check sql injection vulnerabilities.
+:heavy_check_mark: **Server Side Request Forgery (SSRF)**
+1. If you got any Open Redirection then check the target for SSRF.
+2. Look at burpsuite Dashboard for HTTP Forwarding.
+3- Try it:
+```http://169.254.169.254/latest/meta-data```
 
 <br/>
 
-:heavy_check_mark: **XSS**
 
-Finally I put time on parameters and try to inject XSS payloads.
-
-I use Inspect elements feature on firefox or chrome browsers. After injecting payloads I click on "Edit as HTML" to see if I was able to bypass special chars like:
+:heavy_check_mark: **Web Cache Poisoning**
+1. Filter proxy history on burpsuite to find "HIT" or "MISS" values.
+- Use the followings:
 ```
-< > ' " :
+X-Forwarded-Host: hello.com
+X-Forwarded-Host: hello.com%22%2522%25%32%32
+X-Forwarded-Host: hello.com">
+X-Forwarded-Host: hello.com%0d%0a%09kzw
+X-Host: hello.com
+X-Forwarded-For: hello.com
+X-Rewrite-Url: hello.com
+X-Original-Url: hello.com
+X-Requested-By: hello.com
+X-Requested-With: hello.com
 ```
+
+<br/>
+
+
+:heavy_check_mark: **Cross Origin Resource Sharing (CORS)**
+1- If the endpoint contains sensitive information try CORS:
+- Put these Request headers to see if the reflects in the Response:
+```
+Origin: attacker.com
+Origin: attackertarget.com
+Origin: target.com.attacker.com
+```
+
+<br/>
+
+
+
+:heavy_check_mark: **XML External Entities (XML)**
+1. Filter proxy history on burpsuite to find xml Requests.
+
+
+:heavy_check_mark: **Server Side Template Injection (SSTI)**
+1. Use URLs from burpsuite and waybackurl to check them form SSTI.
+2. Don't forget to check POST Method paramters.
+3. Use this payload to get an error:
+```
+${{<%[%'"}}%\
+! Check the following file for more payloads:
+$ cat ssti_cheatsheet.txt
+```
+
+<br/>
+
+
+:heavy_check_mark: **ACCOUNT Takeover**
+1. Go for Account Takeover and IDOR.
+
+
+<br/>
+
+:heavy_check_mark: **Cross Site Request Forgery (CSRF)**
+1. Check if you can change emails, passwords usernames or any sensitive info with CSRF.
+
+<br/>
+
+
+:heavy_check_mark: **oAuth Misconfiguration**
+1. Check oAuth.
+
+<br/>
+
+
+:heavy_check_mark: **Subdomain Takeover**
+1. Use goldigger tool to check new subdomains for this vulnerability.
+2. Look at old subdomains time to time for Subdomain takeover.
+
+<br/>
+
+
+:heavy_check_mark: **HTTP Request Smuggling**
+1. Use smuggler.py tool to check new alive subdomains for this vulnerability.
+
+
+<br/>
+
+:heavy_check_mark: **Remote Code Execution (RCE)**
+1. Test for RCE.
+
+
+<br/>
+
+:heavy_check_mark: **SQL Injection**
+1. Test for SQLi with sleep command.
+! Payloads:
+```
+' or sleep(15)
+1=1# ' or sleep(15)#
+' union select sleep(15),null# keywordhere' and sleep(15)# 
+```
+
+<br/>
+
+
+:heavy_check_mark: **Clickjacking**
+1. If the program allows, then check it for Clickjacking vulnerability.
+
+<br/>
+
+
+:heavy_check_mark: **Read .js files**
+1. Read .js files for sensitive information or finding different vulnerabilites like XSS.
+- Check the followings:
+```
+staging,
+stg,
+dev,
+prod,
+swagger,
+access_token,
+sectoken,
+secret,
+api,
+apisecret,
+x-api-key,
+apidocs,
+/api/,
+/internal/api,
+key,
+```
+
+<br/>
