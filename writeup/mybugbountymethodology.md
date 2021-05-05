@@ -37,7 +37,9 @@ Use dmitry, whatweb, google dork and github to gather more information about the
 
 :heavy_check_mark: **Broken Authentication**
 1. Request a password reset link as ATTACKER, then change the email address and password as
+
 ! VICTIM, and after that try to reset the password with the link as ATTACKER.
+
 2. Check if you can use password reset link after 24 hours.
 
 <br/>
@@ -45,14 +47,18 @@ Use dmitry, whatweb, google dork and github to gather more information about the
 
 :heavy_check_mark: **Cross Site Scripting (XSS)**
 1. Click on every function and intercept them with burp and copy URLs which contain parameters
+
 ! then use kooxss tool to find XSS.
+
 2. Use waybackurl to gather URLs, then modify URLs and test them with kooxss.
-++
+
+```
 $ cat target_domain.txt | waybackurl > wbu_target.com.txt
 $ kooxss wbu_target.com.txt ATTACKER.com
-++
+```
 
 3. Filter burp proxy history for possible DOM XSS events or the followings:
+
 ```
 - [url]
 - value=""
@@ -74,7 +80,8 @@ $ kooxss wbu_target.com.txt ATTACKER.com
 :heavy_check_mark: **Server Side Request Forgery (SSRF)**
 1. If you got any Open Redirection then check the target for SSRF.
 2. Look at burpsuite Dashboard for HTTP Forwarding.
-3- Try it:
+
+3- Try this:
 ```http://169.254.169.254/latest/meta-data```
 
 <br/>
@@ -83,6 +90,7 @@ $ kooxss wbu_target.com.txt ATTACKER.com
 :heavy_check_mark: **Web Cache Poisoning**
 1. Filter proxy history on burpsuite to find "HIT" or "MISS" values.
 - Use the followings:
+
 ```
 X-Forwarded-Host: hello.com
 X-Forwarded-Host: hello.com%22%2522%25%32%32
@@ -101,7 +109,9 @@ X-Requested-With: hello.com
 
 :heavy_check_mark: **Cross Origin Resource Sharing (CORS)**
 1- If the endpoint contains sensitive information try CORS:
+
 - Put these Request headers to see if they reflect in the Response header:
+
 ```
 Origin: attacker.com
 Origin: attackertarget.com
@@ -120,6 +130,7 @@ Origin: target.com.attacker.com
 1. Use URLs from burpsuite and waybackurl to check them form SSTI.
 2. Don't forget to check POST Method paramters.
 3. Use this payload to get an error:
+
 ```
 ${{<%[%'"}}%\
 ! Check the following file for more payloads:
@@ -169,6 +180,7 @@ $ cat ssti_cheatsheet.txt
 :heavy_check_mark: **SQL Injection**
 1. Test for SQLi with sleep command.
 ! Payloads:
+
 ```
 ' or sleep(15)
 1=1# ' or sleep(15)#
@@ -187,6 +199,7 @@ $ cat ssti_cheatsheet.txt
 :heavy_check_mark: **Read .js files**
 1. Read .js files for sensitive information or finding different vulnerabilites like XSS.
 - Check the followings:
+
 ```
 staging,
 stg,
