@@ -11,7 +11,7 @@
 ```
 WriteUp
 ```
-[Full Account Takeover On A European Organization](https://github.com/xbforce/Blog/edit/main/writeup/full-account-takeover-a-european-organization.md) Full Account Takeover happens when the hacker has full access to any account on the targeted web application. He is able to access accounts, read any Private Information of the victims he wants, change email addresses and passwords, and even delete accounts. :man_technologist: [Read more](https://github.com/xbforce/Blog/edit/main/writeup/full-account-takeover-a-european-organization.md)
+[Full Account Takeover On A European Organization](https://github.com/xbforce/Blog/blob/main/writeup/full-account-takeover-a-european-organization.md) Full Account Takeover happens when the hacker has full access to any account on the targeted web application. He is able to access accounts, read any Private Information of the victims he wants, change email addresses and passwords, and even delete accounts. :man_technologist: [Read more](https://github.com/xbforce/Blog/blob/main/writeup/full-account-takeover-a-european-organization.md)
 
 
 [Account Takeover via iFrame Injection](https://github.com/xbforce/Blog/blob/main/writeup/account-takeover-via-iframe-injection.md) Sometimes you find an XSS vulnerability on a target domain but you cannot inject your javascript codes because the target sanitizes payloads perfectly using black/white lists or stop them from doing their malicious jobs by using WAFs, but there are always different ways to bypass defending mechanisms, and it is only the matter of time and efforts. :man_technologist: [Read more](https://github.com/xbforce/Blog/blob/main/writeup/account-takeover-via-iframe-injection.md)
