@@ -1,8 +1,10 @@
-Full Account Takeover
+
+# Full Account Takeover on a European organization
+
 
 ```
 Bug Type: 	IDOR; Full Account Takeover
-Affected URL: 	https://www.redacted.eu/    *A European Organization.
+Affected URL: 	https://www.redacted.eu/
 ```
 
 
