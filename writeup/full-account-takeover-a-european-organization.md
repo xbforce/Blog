@@ -83,7 +83,13 @@ After doing the job successfully I prepared a report and sent it to the affected
 
 </br>
 
-### You can support me if you found this writeup useful:
+### You can support me if you found this writeup useful.
+
+**To support me you can buy Hacking courses through my voucher:**
+
+:moneybag:	https://store.7asecurity.com/discount/97C9-28DB-5815-44EE
+
+**Or donate through the following links:**
 
 :moneybag:	https://paypal.me/pools/c/8pL97bLm3r
 
