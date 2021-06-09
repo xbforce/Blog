@@ -1,3 +1,6 @@
+[![Twitter](https://img.shields.io/badge/twitter%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white&label=Follow%20%40xbforce)](https://twitter.com/xbforce)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[![Youtube](https://img.shields.io/badge/Youtube%20-%23FF0000.svg?&style=for-the-badge&logo=YouTube&logoColor=white&label=Subscribe)](http://www.youtube.com/channel/UCadRCMA7BFJ2iwiABKqf0Fg?sub_confirmation=1)
 
 # Full Account Takeover on a European organization
 
@@ -77,3 +80,12 @@ I wanted to complete the job with deleting the second user’s account, but when
 After doing the job successfully I prepared a report and sent it to the affected organization and they fix the issue immediately.
 
 **Account Takeover** is more than checking the login page. Be creative and read the source codes and URLs carefully if you are going to takeover accounts.
+
+</br>
+
+### You can support me if you found this writeup useful:
+
+:moneybag:	https://paypal.me/pools/c/8pL97bLm3r
+
+:moneybag:	https://www.buymeacoffee.com/xbforce
+
