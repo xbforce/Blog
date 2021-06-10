@@ -120,3 +120,14 @@ https://store.redacted.com/some/dir/store/index.jsp?language={"><iframe src="htt
 
 ![credentials](https://github.com/xbforce/Blog/blob/main/images/account-takeover-via-iframe-injection/06-creds-method1.png)
 
+
+
+### To support me you can buy Hacking courses through my voucher:
+
+:moneybag:	https://store.7asecurity.com/discount/97C9-28DB-5815-44EE
+
+### Or donate through the following links:
+
+:moneybag:	https://paypal.me/pools/c/8pL97bLm3r
+
+:moneybag:	https://www.buymeacoffee.com/xbforce
