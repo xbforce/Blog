@@ -11,6 +11,8 @@
 ```
 WriteUp
 ```
+[Full Account Takeover Via UID Parameter](https://github.com/xbforce/Blog/blob/main/writeup/full_account_takeover_via_uid.md)  One of the biggest mistakes that developers make is creating ID numbers or other elements in sequence, which can cause their products to be vulnerable to different vulnerabilities. :man_technologist: [Read more](https://github.com/xbforce/Blog/blob/main/writeup/full_account_takeover_via_uid.md)
+
 [Full Account Takeover On A European Organization](https://github.com/xbforce/Blog/blob/main/writeup/full-account-takeover-a-european-organization.md) Full Account Takeover happens when the hacker has full access to any account on the targeted web application. He is able to access accounts, read any Private Information of the victims he wants, change email addresses and passwords, and even delete accounts. :man_technologist: [Read more](https://github.com/xbforce/Blog/blob/main/writeup/full-account-takeover-a-european-organization.md)
 
 
